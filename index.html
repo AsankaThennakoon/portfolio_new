@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Asanka Thennakoon Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<style>
+			* {box-sizing:border-box}
+
+			/* Slideshow container */
+			.slideshow-container {
+			max-width: 1000px;
+			position: relative;
+			margin: auto;
+			}
+
+			/* Hide the images by default */
+			.mySlides {
+			display: none;
+			}
+
+			/* Next & previous buttons */
+			.prev{
+			cursor: pointer;
+			position:absolute;
+			top: 50%;
+			width: auto;
+			margin-top: -22px;
+			padding: 16px;
+			color: white;
+			font-weight: bold;
+			font-size: 18px;
+			transition: 0.6s ease;
+			left: 0;
+			border-radius: 0 3px 3px 0;
+			user-select: none;
+			}
+
+			/* Position the "next button" to the right */
+			.next {
+			cursor: pointer;
+			position:absolute;
+			top: 50%;
+			width: auto;
+			margin-top: -22px;
+			padding: 16px;
+			color: white;
+			font-weight: bold;
+			font-size: 18px;
+			transition: 0.6s ease;	
+			right: 0;
+			border-radius: 3px 0 0 3px;
+			user-select: none
+			}
+
+			/* On hover, add a black background color with a little bit see-through */
+			.prev:hover, .next:hover {
+			background-color: rgba(0,0,0,0.8);
+			}
+
+			
+
+			/* Number text (1/3 etc) */
+			.numbertext {
+			color: #f2f2f2;
+			font-size: 12px;
+			padding: 8px 12px;
+			position: absolute;
+			top: 0;
+			}
+
+			/* The dots/bullets/indicators */
+			.dot {
+			cursor: pointer;
+			height: 15px;
+			width: 15px;
+			margin: 0 2px;
+			background-color: #bbb;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.6s ease;
+			}
+
+			.active, .dot:hover {
+			background-color: #717171;
+			}
+
+			/* Fading animation */
+			.fade {
+			-webkit-animation-name: fade;
+			-webkit-animation-duration: 1.5s;
+			animation-name: fade;
+			animation-duration: 1.5s;
+			}
+
+			@-webkit-keyframes fade {
+			from {opacity: .4}
+			to {opacity: 1}
+			}
+
+			@keyframes fade {
+			from {opacity: .4}
+			to {opacity: 1}
+			}
+
+		</style>
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			// Next/previous controls
+			function plusSlides(n) {
+			showSlides(slideIndex += n);
+			}
+
+			// Thumbnail image controls
+			function currentSlide(n) {
+			showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+			}
+			var slideIndex = 0;
+			showSlides();
+
+
+			function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}
+			slides[slideIndex-1].style.display = "block";
+			setTimeout(showSlides, 4000); // Change image every 2 seconds
+		}
+
+		</script>
+
+
+		
+
+
+
+
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Asanka Thennakoon's <br />
+						Portfolio</h1>
+						<!-- <p>A free, fully responsive HTML5 + CSS3 site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a><br />
+						and released for free under the <a href="https://html5up.net/license">Creative Commons license</a>.</p>
+						 -->
+						
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="projects.html" class="logo">My Prjects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="about.html">About Me</a></li>
+							<li><a href="projects.html">My Projects</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/asanka-thennakoon-801056179/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="https://www.facebook.com/asankabandara.thennakoon.9" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/asankabandarathennakoon/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/AsankaThennakoon" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<span class="date"></span>
+									<h2><a href="#">Android and iOS Developer<br />
+									Web Developer</a></h2>
+									<p>Computer Science Undergraduate seeking an internship
+										where I can utilize my knowledge in Flutter Development,
+										Java SE Development, Android and IOS Development
+										along with my competent skills in communication,
+										teamwork spirit and the leadership.</p>
+								</header>
+
+									<!-- Slideshow container -->
+									<div class="slideshow-container">
+
+										<!-- Full-width images with number and caption text -->
+										<div class="mySlides fade">
+										<div class="numbertext">1 / 2</div>
+										<img src="./images/image1.jpg" style="width:100%">
+										</div>
+									
+										<div class="mySlides fade">
+										<div class="numbertext">1 / 2</div>
+										<img src="./images/image2.jpg" style="width:100%">
+										</div>
+									
+										
+										<!-- Next and previous buttons -->
+										<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1)">&#10095;</a>
+									
+									</div>
+									<br>
+									
+									<!-- The dots/circles -->
+									<div style="text-align:center">
+
+										
+
+
+										<span class="dot" onclick="currentSlide(1)"></span>
+										<span class="dot" onclick="currentSlide(2)"></span>
+										<!-- <span class="dot" onclick="currentSlide(3)"></span> -->
+									</div>
+
+
+								<br/>
+								<ul class="actions special">
+									<li><a href="about.html" class="button large">About Me</a></li>
+								</ul>
+							</article>
+
+					
+
+					
+
+					</div>
+
+				
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
